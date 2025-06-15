@@ -10,17 +10,29 @@
 
        <bean class="com.SpringCore.Student" name="student1">
        
-       <property name="studentId">
-       <value>22344</value>
-       </property>
+       <property name="studentId" value="22344"/>
+      
+     
        
-       <property name="studentName">
-       <value>Pranjal Singh</value>
-       </property>
+       <property name="studentName" value="Pranjal" />
        
-       <property name="studentAddress">
-       <value>Delhi</value>
-       </property>
+       
+       <property name="studentAddress" value="Lucknow" />
+       
+       
+       </bean>
+       
+        <bean class="com.SpringCore.Student" name="student2">
+       
+       <property name="studentId" value="9794"/>
+      
+     
+       
+       <property name="studentName" value="Lucifer" />
+       
+       
+       <property name="studentAddress" value="Delhi" />
+       
        
        </bean>
 
