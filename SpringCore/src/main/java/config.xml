@@ -8,8 +8,8 @@
                            http://www.springframework.org/schema/context
                            http://www.springframework.org/schema/context/spring-context.xsd">
 
-       <bean class="com.SpringCore.Student" name="student1" p:studentId="24324" p:studentName="Pranjal Singh" p:studentAddress="Jhansi" />
+       <bean class="com.SpringCore.Student" name="student1" p:studentId="1234" p:studentName="Pranjal Singh" p:studentAddress="Jhansi" />
        
        
-        <bean class="com.SpringCore.Student" name="student2" p:studentId="96545" p:studentName="Pranjal Verma" p:studentAddress="Delhi" />
+        <bean class="com.SpringCore.Student" name="student2" p:studentId="87964" p:studentName="Pranjal Verma" p:studentAddress="Delhi" />
 </beans>
