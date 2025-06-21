@@ -7,16 +7,21 @@
                            http://www.springframework.org/schema/beans/spring-beans.xsd
                            http://www.springframework.org/schema/context
                            http://www.springframework.org/schema/context/spring-context.xsd">
-
+	  
+	  <bean class="com.SpringCore.ci.Certi" name="cer">
+	  <constructor-arg value="Android using Kotlin" />
+	  </bean>
+	  
+	  
       <bean class="com.SpringCore.ci.Person" name="person">
       
-      <constructor-arg>
-      		<value>Pranjal</value>
-      </constructor-arg>
+      <constructor-arg value="Pranjal"/>
+      		
       
-      <constructor-arg>
-      <value>12</value>
-      </constructor-arg>
+      <constructor-arg value="12" />
+      
+      
+      <constructor-arg ref="cer" />
       
       </bean> 
       
