@@ -8,11 +8,14 @@
                            http://www.springframework.org/schema/context
                            http://www.springframework.org/schema/context/spring-context.xsd">
 
+	   
+       
+       <context:annotation-config />
        
        
+       <bean class="com.SpringCore.lifecycle2.Example" name="example">
+       <property name="subject" value="math" />
        
-       <bean class="com.SpringCore.lifecycle2.Pepsi" name="p1">
-       <property name="price" value="20" />
        </bean>
        
        

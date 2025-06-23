@@ -18,10 +18,10 @@ public class Test {
 		
 		
 		
-		System.out.println("++++++++++++++++++++++++++");
+		
 
-		Pepsi p1=(Pepsi) context.getBean("p1");
-		System.out.println(p1);
+		Example example=(Example) context.getBean("example");
+		System.out.println(example);
 
 		
 		
