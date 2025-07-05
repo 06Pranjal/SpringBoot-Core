@@ -9,8 +9,11 @@ public class Test {
 		ApplicationContext context=new ClassPathXmlApplicationContext("com/SpringCore/stereotype/stereoconfig.xml");
 		Student student=(Student) context.getBean("student");
 		
-		System.out.println(student);
+		System.out.println(student.hashCode());
+		
+		Student student2=(Student) context.getBean("student");
+		System.out.println(student2.hashCode());
 
 	}
 
-}
+} 
