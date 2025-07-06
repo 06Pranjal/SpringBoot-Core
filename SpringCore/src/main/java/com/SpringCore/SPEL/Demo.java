@@ -11,6 +11,14 @@ public class Demo {
 	private int y;
 	@Value("#{T(java.lang.Math).pow(25,2)}")
 	private double z;
+	@Value("#{8>3}")
+	private boolean isActive;
+	public boolean isActive() {
+		return isActive;
+	}
+	public void setActive(boolean isActive) {
+		this.isActive = isActive;
+	}
 	public double getZ() {
 		return z;
 	}
@@ -31,7 +39,7 @@ public class Demo {
 	}
 	@Override
 	public String toString() {
-		return "Demo [x=" + x + ", y=" + y + ", z=" + z + "]";
+		return "Demo [x=" + x + ", y=" + y + ", z=" + z + ", isActive=" + isActive + "]";
 	}
 	
 	
