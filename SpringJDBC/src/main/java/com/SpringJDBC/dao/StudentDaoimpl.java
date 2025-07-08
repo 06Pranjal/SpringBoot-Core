@@ -21,6 +21,15 @@ public class StudentDaoimpl implements StudentDao{
 		return r;
 	}
 	
+	
+	@Override
+	public int delete(int studentId) {
+		String query="delete from students where id=?";
+		int r=this.jdbcTemplate.update(query,studentId);
+		return r;
+	}
+		
+		
 	public JdbcTemplate getJdbcTemplate() {
 		return jdbcTemplate;
 	}
@@ -28,9 +37,12 @@ public class StudentDaoimpl implements StudentDao{
 		this.jdbcTemplate = jdbcTemplate;
 	}
 
+	
+	}
+
 
 	
 	
 	
 
-}
+
