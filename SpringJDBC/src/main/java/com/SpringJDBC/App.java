@@ -5,6 +5,7 @@ import java.util.Scanner;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import com.SpringJDBC.dao.StudentDao;
+import com.SpringJDBC.entities.Student;
 
 public class App 
 {
@@ -36,20 +37,24 @@ public class App
         
         //DELETE
      // Get user input for deletion
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the ID of the student you want to delete: ");
-        int id = sc.nextInt();
-        sc.close();
-
-        int result = studentDao.delete(id);
-
-        if (result > 0) {
-            System.out.println("Deleted successfully. Rows affected: " + result);
-        } else {
-            System.out.println("No record found with ID: " + id);
-        }
+//        Scanner sc = new Scanner(System.in);
+//        System.out.print("Enter the ID of the student you want to delete: ");
+//        int id = sc.nextInt();
+//        sc.close();
+//
+//        int result = studentDao.delete(id);
+//
+//        if (result > 0) {
+//            System.out.println("Deleted successfully. Rows affected: " + result);
+//        } else {
+//            System.out.println("No record found with ID: " + id);
+//        }
+      
         
         
+   Student student=studentDao.getStudent(222); 
+   System.out.println(student);
+
         
 
         
