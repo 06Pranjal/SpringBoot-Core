@@ -1,5 +1,6 @@
 package com.SpringJDBC;
 
+import java.util.List;
 import java.util.Scanner;
 
 import org.springframework.context.ApplicationContext;
@@ -52,8 +53,15 @@ public class App
       
         
         
-   Student student=studentDao.getStudent(222); 
-   System.out.println(student);
+//   Student student=studentDao.getStudent(222); 
+//   System.out.println(student);
+        
+        
+        List<Student> students=studentDao.getAllStudents();
+        for(Student s:students) {
+        	System.out.println(s);
+
+        }
 
         
 
