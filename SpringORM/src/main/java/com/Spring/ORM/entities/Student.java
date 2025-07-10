@@ -49,6 +49,11 @@ private String studentCity;
 	public void setStudentCity(String studentCity) {
 	    this.studentCity = studentCity;
 	}
+	@Override
+	public String toString() {
+	    return "Student [ID=" + studentId + ", Name=" + studentName + ", City=" + studentCity + "]";
+	}
+
 
 	
 	
