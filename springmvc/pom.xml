@@ -22,7 +22,9 @@
     <version>7.0.0-M6</version>
 </dependency>
 
-  </dependencies>
+ 
+
+</dependencies>
   <build>
     <finalName>SpringMvc</finalName>
   </build>
