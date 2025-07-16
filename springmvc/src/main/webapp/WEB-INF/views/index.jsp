@@ -8,5 +8,11 @@
 </head>
 <body>
 This is homePage.....
+
+<%
+String name=(String)request.getAttribute("name");
+
+%>
+<h3>Name is :- <%=name %> ....</h3>
 </body>
 </html>
