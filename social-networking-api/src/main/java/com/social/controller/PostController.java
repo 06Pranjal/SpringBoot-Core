@@ -1,19 +1,21 @@
 package com.social.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.social.services.PostService;
+import com.social.demo.entity.Post;
+
+import java.util.Arrays;
+import java.util.List;
 
 @RestController
 public class PostController {
 
-    @Autowired
-    private PostService postService;
-
-    @GetMapping("/post")
-    public String getUser() {
-        return postService.getUser();
+    @GetMapping("/posts")
+    public List<Post> getAllPosts() {
+        return Arrays.asList(
+            new Post(1, "Hello world", 1),
+            new Post(2, "This is my first post", 2)
+        );
     }
 }

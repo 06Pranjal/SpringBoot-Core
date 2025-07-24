@@ -1,19 +1,21 @@
 package com.social.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.social.services.UserService;
+import com.social.demo.entity.User;
+
+import java.util.Arrays;
+import java.util.List;
 
 @RestController
 public class UserController {
 
-    @Autowired
-    private UserService userService;
-
-    @GetMapping("/user")
-    public String getUser() {
-        return userService.getUser();
+    @GetMapping("/users")
+    public List<User> getAllUsers() {
+        return Arrays.asList(
+            new User(1, "Alice", "alice@email.com"),
+            new User(2, "Bob", "bob@email.com")
+        );
     }
 }
