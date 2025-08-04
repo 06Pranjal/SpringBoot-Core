@@ -1,21 +1,18 @@
-package com.social.controller;
+package com.social.demo.locations;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.social.demo.entity.Location;
-
-import java.util.Arrays;
 import java.util.List;
 
 @RestController
 public class LocationController {
 
+    @Autowired
+    private LocationService locationService;
+
     @GetMapping("/locations")
     public List<Location> getAllLocations() {
-        return Arrays.asList(
-            new Location(1, "Delhi", "India"),
-            new Location(2, "New York", "USA")
-        );
+        return locationService.getAllLocations();
     }
 }
